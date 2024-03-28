@@ -1,0 +1,23 @@
+version: "3.1"
+
+services:
+
+    node:
+        image: platzi-angular-17-node
+        container_name: platzi-angular-17-node
+        restart: always
+        working_dir: /srv
+        build:
+            context: ./dockerfiles
+            dockerfile: Dockerfile
+        volumes:
+            - ./../:/srv
+        command: tail -f /dev/null
+        networks:
+            - default
+        ports: 
+            - 4200:4200
+
+networks:
+    default:
+        driver: bridge
