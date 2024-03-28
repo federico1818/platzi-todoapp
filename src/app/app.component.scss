@@ -1,0 +1,25 @@
+:host {
+    display: grid;
+    justify-content: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 32px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+ul {
+    display: grid;
+    gap: 16px 0;
+    width: 320px;
+}
+
+li {
+    background-color: var(--surface-container-high-color);
+    border-radius: 4px;
+    color: var(--on-surface-container-high-color);
+    font-size: 15px;
+    padding: 16px;
+}
