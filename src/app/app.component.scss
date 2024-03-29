@@ -16,10 +16,30 @@ ul {
     width: 320px;
 }
 
-li {
+.button-icon {
+    border: 0;
+    background: none;
+    color: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: .3s background-color;
+}
+
+.button-icon:hover {
+    background-color: var(--surface-container-color);
+}
+
+.task {
+    height: 48px;
+    display: grid;
+    grid-template-columns: 1fr 40px;
     background-color: var(--surface-container-high-color);
     border-radius: 4px;
     color: var(--on-surface-container-high-color);
     font-size: 15px;
-    padding: 16px;
+    align-items: center;
+    padding: 0 16px;
 }

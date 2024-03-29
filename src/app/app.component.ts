@@ -26,4 +26,8 @@ export class AppComponent {
             completed: false
         }
     ])
+
+    public deleteTask(index: number): void {
+        console.log(index)
+    }
 }
