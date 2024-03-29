@@ -28,6 +28,9 @@ export class AppComponent {
     ])
 
     public deleteTask(index: number): void {
-        console.log(index)
+        this.tasks.update((tasks: Task[]) => {
+            tasks.splice(index, 1)
+            return tasks
+        })
     }
 }
