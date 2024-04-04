@@ -1,4 +1,7 @@
 <h1>Todo App</h1>
+<div>
+    <input type="text" placeholder="New task..." (change)="onChange($event)">
+</div>
 <ul>
     <li class="task" *ngFor="let task of tasks(); index as i">
         <div class="task-title">{{ task.title }}</div>

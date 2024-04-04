@@ -33,4 +33,21 @@ export class AppComponent {
             return tasks
         })
     }
+
+    public onChange(event: Event): void {
+        const input = event.target as HTMLInputElement
+        this.addTask(input.value)
+    }
+
+    private addTask(title: string): void {
+        this.tasks.update((tasks: Task[]) => {
+            return [
+                ...tasks,
+                {
+                    title: title,
+                    completed: false
+                }
+            ]
+        })
+    }
 }
