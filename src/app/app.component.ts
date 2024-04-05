@@ -39,6 +39,17 @@ export class AppComponent {
         this.addTask(input.value)
     }
 
+    public toggleCompleted(i: number): void {
+        this.tasks.update((tasks: Task[]) => {
+            return tasks.map((task: Task, index: number) => {
+                return i !== index? task: {
+                    ...task,
+                    completed: !task.completed
+                }
+            })
+        })
+    }
+
     private addTask(title: string): void {
         this.tasks.update((tasks: Task[]) => {
             return [

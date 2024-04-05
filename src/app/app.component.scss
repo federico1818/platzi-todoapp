@@ -2,6 +2,7 @@
     display: grid;
     justify-content: center;
     gap: 16px 0;
+    padding: 16px 0;
 }
 
 h1 {
@@ -15,6 +16,20 @@ ul {
     display: grid;
     gap: 16px 0;
     width: 320px;
+}
+
+input {
+    background-color: var(--surface-container-color);
+    border-radius: 4px;
+    color: inherit;
+    height: 48px;
+    padding: 0 16px;
+    width: 100%;
+}
+
+.checkbox {
+    height: 16px;
+    border: 0;
 }
 
 .button-icon {
@@ -33,13 +48,17 @@ ul {
 .task {
     height: 48px;
     display: grid;
-    grid-template-columns: 1fr 40px;
+    grid-template-columns: 40px 1fr 40px;
     background-color: var(--surface-container-high-color);
     border-radius: 4px;
     color: var(--on-surface-container-high-color);
     font-size: 15px;
     align-items: center;
-    padding: 0 0 0 16px;
+    padding: 0 0 0 8px;
+}
+
+.task.completed .task-title {
+    text-decoration: line-through;
 }
 
 .task:hover .button-icon {
