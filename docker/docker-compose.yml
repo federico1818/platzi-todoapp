@@ -1,0 +1,15 @@
+services:
+    angular:
+        image: angular:20.0.1
+        container_name: angular
+        restart: always
+        working_dir: /srv
+        build:
+            context: ./angular-20-0-1
+            dockerfile: Dockerfile
+        volumes:
+            - ./..:/srv
+        user: "${USER_ID}:${GROUP_ID}"
+        command: ng serve --host 0.0.0.0 --port 4200
+        ports: 
+            - 4200:4200
