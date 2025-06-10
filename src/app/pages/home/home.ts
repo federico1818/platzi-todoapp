@@ -8,8 +8,11 @@ import { Component } from '@angular/core'
 })
 
 export class Home {
-    protected tasks: string[] = [
+    public tasks: string[] = [
         'Task 1',
         'Task 2'
     ];
+    public onClick(): void {
+        alert('On Click')
+    }
 }
