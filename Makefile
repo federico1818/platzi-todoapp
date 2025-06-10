@@ -12,6 +12,11 @@ create:
 	"npm config set prefix /tmp/.npm-global && export PATH=/tmp/.npm-global/bin:\$$PATH && \
 	npm install -g @angular/cli@$(ANGULAR_CLI_VERSION) && ng new todoapp --defaults --skip-git --directory=."
 
+install:
+	@docker run -it --rm -u $(USER_ID):$(GROUP_ID) -v "$(FOLDER):/srv" -w /srv node:$(NODE_VERSION) bash -c \
+	"npm config set prefix /tmp/.npm-global && export PATH=/tmp/.npm-global/bin:\$$PATH && \
+	npm install"
+
 start:
 	@USER_ID=$(USER_ID) GROUP_ID=$(GROUP_ID) docker-compose -f ./docker/docker-compose.yml -p angular up -d
 
