@@ -1,0 +1,9 @@
+<ul>
+    @for (task of tasks; track task)
+    {
+        <li>{{ task }}</li>
+    } @empty
+    {
+        <li>There are no tasks</li>
+    }
+</ul>

@@ -13,8 +13,5 @@ import { RouterOutlet } from '@angular/router'
 })
 
 export class App {
-    protected tasks = [
-        'Task 1',
-        'Task 2'
-    ];
+    
 }
